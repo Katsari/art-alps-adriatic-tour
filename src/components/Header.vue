@@ -1,15 +1,14 @@
 <template>
   <header class="relative py-12 sm:py-16 px-4 overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center">
     <!-- Background image with subtle zoom animation -->
-    <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0" style="z-index: -1;">
       <img 
-        src="https://images.pexels.com/photos/10478251/pexels-photo-10478251.jpeg"
-        alt="Lake Bled, Slovenia"
-        class="w-full h-full object-cover object-center scale-105 animate-slow-zoom brightness-[0.3] contrast-150 saturate-50"
-        loading="eager"
-        fetchpriority="high"
+        src="https://images.unsplash.com/photo-1543438853-5a971e43f6cf?q=80&w=1920&auto=format&fit=crop"
+        alt="Zagreb, Croatia"
+        class="w-full h-full object-cover"
+        style="filter: brightness(0.4);"
       />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     </div>
     
     <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
