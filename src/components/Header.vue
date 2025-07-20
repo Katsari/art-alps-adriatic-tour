@@ -3,10 +3,11 @@
     <!-- Background image with subtle zoom animation -->
     <div class="absolute inset-0 -z-10">
       <img 
-        src="https://images.pexels.com/photos/10478251/pexels-photo-10478251.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+        src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=1920&q=80&auto=format&fit=crop"
         alt="Lake Bled, Slovenia"
         class="w-full h-full object-cover object-center scale-105 animate-slow-zoom brightness-[0.3] contrast-150 saturate-50"
         loading="eager"
+        fetchpriority="high"
       />
       <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
     </div>
