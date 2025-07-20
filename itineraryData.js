@@ -40,7 +40,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Zagreb,+Croatia/",
       accommodation: "https://www.hostelworld.com/hostels/europe/croatia/zagreb/",
       transport: "https://www.plesoprijevoz.hr/en/"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d713389.5816397762!2d15.485832150781245!3d45.37259674804687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4765d692c902cc39%3A0x3a45249628fbc28a!2sZagreb%2C%20Croatia!3m2!1d45.815399!2d15.981919!4m5!1s0x47615e61de19e275%3A0x2cbf0cc0e58baf12!2sPlitvice%20Lakes%20National%20Park%2C%20Croatia!3m2!1d44.865397!2d15.582011999999999!5e0!3m2!1sen!2sus!4v1737390000000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Zagreb,+Croatia/St.+Mark's+Church,+Zagreb/Museum+of+Broken+Relationships/Dolac+Market/Plitvice+Lakes+National+Park"
   },
   {
     id: 2,
@@ -81,7 +83,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Rovinj,+Croatia/",
       accommodation: "https://www.hostelworld.com/hostels/europe/croatia/rovinj/",
       transport: "https://www.getbybus.com/en/"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d180739.44915576108!2d13.562493599999998!3d45.0240325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x477c3daa64151ff1%3A0x8d37d769b24e61f4!2sRovinj%2C%20Croatia!3m2!1d45.0811661!2d13.638706999999999!4m5!1s0x477cd2de09337b6d%3A0x72324a3a7b4e580d!2sPula%2C%20Croatia!3m2!1d44.8666232!2d13.849579099999999!5e0!3m2!1sen!2sus!4v1737390100000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Rovinj,+Croatia/St.+Euphemia's+Basilica/Punta+Corrente+Forest+Park/Pula+Arena/Arch+of+the+Sergii"
   },
   {
     id: 3,
@@ -121,7 +125,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Ljubljana,+Slovenia/",
       accommodation: "https://www.hostelworld.com/hostels/europe/slovenia/ljubljana/",
       transport: "https://global.flixbus.com/bus-routes/bus-ljubljana-zurich"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d351876.7905907745!2d14.231517450781245!3d46.17124054804687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x476531f5969886d1%3A0x400f81c823fec20!2sLjubljana%2C%20Slovenia!3m2!1d46.0569465!2d14.5057515!4m5!1s0x477a66a28e51c381%3A0xbe55145a959a6796!2sLake%20Bled%2C%20Slovenia!3m2!1d46.368199399999996!2d14.1038771!5e0!3m2!1sen!2sus!4v1737390200000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Ljubljana,+Slovenia/Ljubljana+Castle/Triple+Bridge/Dragon+Bridge/Lake+Bled/Ojstrica+Viewpoint"
   },
   {
     id: 4,
@@ -163,7 +169,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Bolzano,+South+Tyrol,+Italy/",
       accommodation: "https://www.booking.com/searchresults.html?ss=Bolzano",
       transport: "https://www.suedtirolmobil.info/en/"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d220715.94168426316!2d11.30778695!3d46.57831405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x47831158cb498369%3A0x46619ac09b1d6469!2sBolzano%2C%20Province%20of%20Bolzano%20-%20South%20Tyrol%2C%20Italy!3m2!1d46.498295399999994!2d11.354758099999999!4m5!1s0x477831ebcb59794d%3A0x773b3231dad50455!2sAlpe%20di%20Siusi!3m2!1d46.540515!2d11.5811545!4m5!1s0x47783d7f99829d47%3A0x43d012dc49cf830!2sLago%20di%20Carezza!3m2!1d46.409475299999995!2d11.575506!4m5!1s0x47830e6c79572fef%3A0x5e146c2a9b0e9dad!2sRenon%2C%20Province%20of%20Bolzano%20-%20South%20Tyrol%2C%20Italy!3m2!1d46.540143!2d11.434294999999999!5e0!3m2!1sen!2sus!4v1737390300000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Bolzano,+Italy/Alpe+di+Siusi/Lago+di+Carezza/Renon+Earth+Pyramids"
   },
   {
     id: 5,
@@ -203,7 +211,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Tirano,+Province+of+Sondrio,+Italy/",
       accommodation: "https://www.booking.com/city/it/tirano.html",
       transport: "https://www.rhb.ch/en/panoramic-trains/bernina-express"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d355048.95831245116!2d10.009795349999998!3d46.35366225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x4783a53bab832cd1%3A0x966b7e840b9f3ff!2sTirano%2C%20Province%20of%20Sondrio%2C%20Italy!3m2!1d46.2141872!2d10.168917899999999!4m5!1s0x478fafb3640de239%3A0xe21559b1e01e3fec!2sSt.%20Moritz%2C%20Switzerland!3m2!1d46.4907973!2d9.8355079!5e0!3m2!1sen!2sus!4v1737390400000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Tirano,+Italy/St.+Moritz,+Switzerland/Tirano,+Italy"
   },
   {
     id: 6,
@@ -242,7 +252,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Florence,+Metropolitan+City+of+Florence,+Italy/",
       accommodation: "https://www.hostelworld.com/search?search_keywords=Florence,%20Italy",
       transport: "https://www.trenitalia.com/en.html"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d46110.20462977195!2d11.220598750000001!3d43.7831515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e2!4m5!1s0x132a54008dc59081%3A0x848806ff1e82e12!2sCathedral%20of%20Santa%20Maria%20del%20Fiore%2C%20Florence%2C%20Italy!3m2!1d43.773155!2d11.255997599999999!4m5!1s0x132a5400c6e9fe49%3A0x32d3572b3fb60a3f!2sPonte%20Vecchio%2C%20Florence!3m2!1d43.7679821!2d11.253166599999999!4m5!1s0x132a54003dcf1bfb%3A0x95befd0062e8a4b1!2sGalleria%20degli%20Uffizi%2C%20Florence!3m2!1d43.7677925!2d11.2553077!4m5!1s0x132a5400e57893f9%3A0xe4e22be754be54e8!2sPiazzale%20Michelangelo%2C%20Florence%2C%20Italy!3m2!1d43.7629318!2d11.2650332!4m5!1s0x132a5446a8bba3b1%3A0x8f8279ec6de42ddd!2sFlorence%20Central%20Market!3m2!1d43.776457099999996!2d11.253472799999999!5e0!3m2!1sen!2sus!4v1737390500000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Florence+Cathedral/Ponte+Vecchio/Uffizi+Gallery/Piazzale+Michelangelo"
   },
   {
     id: 7,
@@ -283,7 +295,9 @@ export const itinerary = [
       location: "https://www.google.com/maps/place/Venice,+Metropolitan+City+of+Venice,+Italy/",
       accommodation: "https://www.andavenice.com/hostel-mestre-station/",
       transport: "https://www.atvo.it/en-venice-airport.html"
-    }
+    },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d89600.84974544033!2d12.240718749999999!3d45.46779755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e2!4m5!1s0x477eb1c8e96e1653%3A0xce66e3c61076aef1!2sPiazza%20San%20Marco%2C%20Venice!3m2!1d45.434336199999995!2d12.3387844!4m5!1s0x477eb1c8d6469a39%3A0xb809d204dcca7552!2sRialto%20Bridge%2C%20Venice!3m2!1d45.4380023!2d12.335893899999999!4m5!1s0x477eda5479335293%3A0xb4efc08e9c057a84!2sMurano%2C%20Venice!3m2!1d45.455864!2d12.3516785!4m5!1s0x477edc46a8ed6353%3A0x44b551abe91f4e92!2sBurano%2C%20Venice!3m2!1d45.485371!2d12.417223!5e0!3m2!1sen!2sus!4v1737390600000!5m2!1sen!2sus",
+    routeUrl: "https://www.google.com/maps/dir/Mestre,+Venice/St.+Mark's+Square/Rialto+Bridge/Murano/Burano"
   }
 ];
 

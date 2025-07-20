@@ -60,7 +60,7 @@
           <span>Highlights</span>
           <ChevronDownIcon :class="['h-4 w-4 transition-transform', showHighlights ? 'rotate-180' : '']" />
         </button>
-        <ul v-show="showHighlights" class="space-y-1 ml-7">
+        <ul v-show="showHighlights" class="space-y-1 ml-2">
           <li v-for="highlight in day.highlights" :key="highlight" class="text-slate-600 text-base">
             • {{ highlight }}
           </li>
@@ -77,7 +77,7 @@
           <span>Budget Tips</span>
           <ChevronDownIcon :class="['h-4 w-4 transition-transform', showBudgetTips ? 'rotate-180' : '']" />
         </button>
-        <ul v-show="showBudgetTips" class="space-y-1 ml-7">
+        <ul v-show="showBudgetTips" class="space-y-1 ml-2">
           <li v-for="tip in day.budgetTips" :key="tip" class="text-slate-600 text-base">
             • {{ tip }}
           </li>
@@ -94,10 +94,49 @@
           <span>Detailed Itinerary</span>
           <ChevronDownIcon :class="['h-4 w-4 transition-transform', showItinerary ? 'rotate-180' : '']" />
         </button>
-        <div v-show="showItinerary" class="space-y-3 ml-7">
+        <div v-show="showItinerary" class="space-y-3 ml-2">
           <div v-for="(details, day) in day.detailedItinerary" :key="day">
             <h5 class="font-semibold text-slate-700 text-lg">{{ day }}</h5>
             <div class="text-slate-600 text-base leading-relaxed" v-html="formatDetails(details)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Route Map Section -->
+      <div v-if="day.mapUrl" class="mb-4">
+        <button 
+          @click="showRouteMap = !showRouteMap"
+          class="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium mb-2 cursor-pointer"
+        >
+          <MapIcon class="h-5 w-5" />
+          <span>Route Map</span>
+          <ChevronDownIcon :class="['h-4 w-4 transition-transform', showRouteMap ? 'rotate-180' : '']" />
+        </button>
+        <div v-show="showRouteMap" class="ml-2">
+          <div class="relative w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden bg-slate-100">
+            <iframe
+              :src="day.mapUrl"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="absolute inset-0"
+            ></iframe>
+          </div>
+          <div v-if="day.routeUrl" class="mt-2">
+            <a 
+              :href="day.routeUrl" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+              View full route with directions in Google Maps
+            </a>
           </div>
         </div>
       </div>
@@ -139,7 +178,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { MapPinIcon, HomeIcon, TruckIcon, SparklesIcon, BanknotesIcon, CalendarDaysIcon, ChevronDownIcon, CurrencyEuroIcon, HomeModernIcon, ShoppingBagIcon, TicketIcon } from '@heroicons/vue/24/outline'
+import { MapPinIcon, HomeIcon, TruckIcon, SparklesIcon, BanknotesIcon, CalendarDaysIcon, ChevronDownIcon, CurrencyEuroIcon, HomeModernIcon, ShoppingBagIcon, TicketIcon, MapIcon } from '@heroicons/vue/24/outline'
 
 defineProps({
   day: {
@@ -151,6 +190,7 @@ defineProps({
 const showHighlights = ref(false)
 const showBudgetTips = ref(false)
 const showItinerary = ref(false)
+const showRouteMap = ref(false)
 
 const getOptimizedImageUrl = (url) => {
   // For Unsplash images, add optimization parameters
