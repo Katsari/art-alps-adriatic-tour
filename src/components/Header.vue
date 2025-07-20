@@ -3,7 +3,7 @@
     <!-- Background image with subtle zoom animation -->
     <div class="absolute inset-0 -z-10">
       <img 
-        src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=1920&q=80&auto=format&fit=crop"
+        src="https://images.pexels.com/photos/10478251/pexels-photo-10478251.jpeg"
         alt="Lake Bled, Slovenia"
         class="w-full h-full object-cover object-center scale-105 animate-slow-zoom brightness-[0.3] contrast-150 saturate-50"
         loading="eager"
