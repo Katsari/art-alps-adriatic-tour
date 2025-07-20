@@ -1,10 +1,11 @@
 <template>
   <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8 transition-all duration-300 hover:shadow-xl">
-    <div class="relative h-64 md:h-80 overflow-hidden">
+    <div class="relative h-64 md:h-80 overflow-hidden bg-slate-200">
       <img 
-        :src="day.imageUrl" 
+        :src="getOptimizedImageUrl(day.imageUrl)" 
         :alt="day.title"
         class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+        loading="lazy"
       />
       <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md">
         <span class="text-sm font-bold text-slate-700">{{ day.days }}</span>
@@ -150,6 +151,20 @@ defineProps({
 const showHighlights = ref(false)
 const showBudgetTips = ref(false)
 const showItinerary = ref(false)
+
+const getOptimizedImageUrl = (url) => {
+  // For Unsplash images, add optimization parameters
+  if (url.includes('unsplash.com')) {
+    const baseUrl = url.split('?')[0]
+    return `${baseUrl}?auto=compress&cs=tinysrgb&w=800&q=80`
+  }
+  // For Pexels images, add optimization parameters
+  if (url.includes('pexels.com')) {
+    const baseUrl = url.split('?')[0]
+    return `${baseUrl}?auto=compress&cs=tinysrgb&w=800&h=600&q=80`
+  }
+  return url
+}
 
 const formatDetails = (details) => {
   // Convert text to bullet points
