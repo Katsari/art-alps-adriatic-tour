@@ -5,7 +5,7 @@
     <div class="sticky top-0 z-40 bg-white/80 backdrop-blur-md shadow-sm mb-8">
       <div class="max-w-4xl mx-auto px-4 py-3">
         <div class="flex items-center justify-between text-sm">
-          <span class="font-medium text-slate-700">The Smart Traveler's European Circuit</span>
+          <span class="font-medium text-slate-700">The Smart Traveler's European Journey</span>
           <button @click="scrollToTop" class="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors cursor-pointer">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
@@ -18,11 +18,16 @@
        
     <main class="max-w-4xl mx-auto px-4 pb-4">
       <TransitionGroup name="fade-slide" tag="div">
+        <RouteMap 
+          key="route-map"
+          :style="{ animationDelay: '0ms' }"
+          class="fade-slide-item"
+        />
         <ItineraryDay 
           v-for="(day, index) in itinerary" 
           :key="day.id"
           :day="day"
-          :style="{ animationDelay: `${index * 100}ms` }"
+          :style="{ animationDelay: `${(index + 1) * 100}ms` }"
           class="fade-slide-item"
         />
       </TransitionGroup>
@@ -30,9 +35,38 @@
 
     <BudgetTracker :budget="budget" />
     
-    <footer class="bg-slate-900 text-white py-8 px-4 text-center">
-      <p class="text-sm opacity-80">Safe travels! Remember to check visa requirements and travel insurance.</p>
-      <p class="text-xs mt-2 opacity-60">Budget calculations are estimates based on 2025 prices.</p>
+    <footer class="bg-slate-900 text-white py-12 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+          <div>
+            <h3 class="font-semibold mb-2 text-blue-400">Before You Go</h3>
+            <ul class="space-y-1 text-slate-300">
+              <li>✓ EU citizens: ID card sufficient</li>
+              <li>✓ Most countries: 90 days visa-free</li>
+              <li>✓ Travel insurance recommended</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-blue-400">Smart Travel Tips</h3>
+            <ul class="space-y-1 text-slate-300">
+              <li>✓ Book trains 2-3 weeks ahead</li>
+              <li>✓ Hostels fill up in summer</li>
+              <li>✓ Download offline maps</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2 text-blue-400">Money Matters</h3>
+            <ul class="space-y-1 text-slate-300">
+              <li>✓ Croatia, Slovenia, Italy: Euro (€)</li>
+              <li>✓ Switzerland: Swiss Franc (CHF)</li>
+              <li>✓ Cards accepted almost everywhere</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-slate-700 text-center">
+          <p class="text-xs text-slate-400">Budget estimates based on 2025 prices • Prices may vary by season</p>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -42,6 +76,7 @@ import { onMounted } from 'vue'
 import Header from './components/Header.vue'
 import BudgetTracker from './components/BudgetTracker.vue'
 import ItineraryDay from './components/ItineraryDay.vue'
+import RouteMap from './components/RouteMap.vue'
 import { itinerary, budget } from '../itineraryData.js'
 
 const scrollToTop = () => {
