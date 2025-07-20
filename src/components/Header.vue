@@ -1,17 +1,16 @@
 <template>
   <header class="relative py-12 sm:py-16 px-4 overflow-hidden min-h-[300px] sm:min-h-[400px] flex items-center">
-    <!-- Background image with subtle zoom animation -->
-    <div class="absolute inset-0" style="z-index: -1;">
+    <!-- Background image -->
+    <div class="absolute inset-0">
       <img 
         src="https://images.unsplash.com/photo-1543438853-5a971e43f6cf?q=80&w=1920&auto=format&fit=crop"
         alt="Zagreb, Croatia"
-        class="w-full h-full object-cover"
-        style="filter: brightness(0.4);"
+        class="w-full h-full object-cover brightness-50"
       />
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
     </div>
     
-    <div class="max-w-4xl mx-auto text-center relative z-10 w-full">
+    <div class="max-w-4xl mx-auto text-center relative w-full">
       <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-3 sm:mb-4 drop-shadow-lg leading-tight">
         The Art, Alps & Adriatic Tour
       </h1>
